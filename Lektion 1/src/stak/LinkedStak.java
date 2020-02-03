@@ -7,7 +7,7 @@ public class LinkedStak implements Stak {
     }
 
     @Override
-    public String pop() {
+    public String pop(String e) {
         return null;
     }
 
