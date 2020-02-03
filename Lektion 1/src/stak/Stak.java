@@ -1,0 +1,4 @@
+package stak;
+
+interface Stak {
+}
