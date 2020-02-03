@@ -9,13 +9,14 @@ public class Main {
         ArrayStak stak = new ArrayStak();
 
 
-
-     stak.push("fadl");
-     stak.push("rama");
-     stak.push("ka");
-     stak.push("l");
      stak.push("oo");
      stak.push("lllll");
+        stak.push("oo1");
+        stak.push("llll2l");
+     stak.show();
+
+        System.out.println("//////////////////////");
+     stak.pop();
      stak.show();
 
 

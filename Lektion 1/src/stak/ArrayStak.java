@@ -1,38 +1,41 @@
 package stak;
 
+import javax.security.auth.login.CredentialNotFoundException;
 import java.beans.Customizer;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ArrayStak implements Stak {
 
-    private List<String> stak = new ArrayList<>();
+    private String stak[] = new String[4];
+    int a=0;
 
     @Override
     public void push(String e) {
-        if(stak.size() > 4) {
-            System.out.println("Der kan ikke tilføjes mere");
-        } else {
-            stak.add(e);
+        stak[a++] = e;
+
         }
-    }
+
+
+
 
     @Override
-    public String pop(String e) {
-        stak.remove(e);
-        return e;
+    public String pop() {
+        String firstNumber;
+        firstNumber = stak[0];
+
+        for (int i = 0; i < stak.length; i++) {
+           if (i < 3) {
+               stak[i] = stak[i + 1];
+               stak[i+1]=null;
+           }
+        }
+        return firstNumber;
     }
 
     @Override
     public boolean isEmpty() {
-
-        if(stak.size() > 0) {
-            System.out.println("Ikke tom");
-            return true;
-        } else {
-            System.out.println("Tom");
-            return false;
-        }
+        return false;
 
 
     }
@@ -44,11 +47,13 @@ public class ArrayStak implements Stak {
 
     @Override
     public void show() {
-        for (int i = 0; i < stak.size() ; i++) {
+        for (int i = 0; i < stak.length; i++) {
+           if (stak[i] != null) {
+               System.out.println(stak[i]);
+           }
 
-            String s = this.stak.get(i);
+        }
 
-            System.out.println(s);
         }
     }
-}
+
