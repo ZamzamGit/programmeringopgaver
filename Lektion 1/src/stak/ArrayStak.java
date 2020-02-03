@@ -9,6 +9,7 @@ public class ArrayStak implements Stak {
 
     private String stak[] = new String[4];
     int a=0;
+    
 
     @Override
     public void push(String e) {
@@ -24,8 +25,8 @@ public class ArrayStak implements Stak {
         String firstNumber;
         firstNumber = stak[0];
 
-        for (int i = 0; i < stak.length; i++) {
-           if (i < 3) {
+        for (int i = 0; i < stak.length-1; i++) {
+           if (i < stak.length - 1) {
                stak[i] = stak[i + 1];
                stak[i+1]=null;
            }
@@ -36,7 +37,6 @@ public class ArrayStak implements Stak {
     @Override
     public boolean isEmpty() {
         return false;
-
 
     }
 
