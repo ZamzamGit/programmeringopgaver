@@ -2,7 +2,7 @@ package complex;
 
 import java.util.Objects;
 
-public class Complex {
+public class Complex implements IComplex {
 
     private final double re;   // the real part
     private final double im;   // the imaginary part
@@ -100,8 +100,6 @@ public class Complex {
     public Complex tan() {
         return sin().divides(cos());
     }
-
-
 
     // a static version of plus
     public static Complex plus(Complex a, Complex b) {
