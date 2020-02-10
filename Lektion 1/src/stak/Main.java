@@ -16,8 +16,14 @@ public class Main {
         stak.show();
         stak.isFull();
 
+         stak.push("oo");
+         stak.push("lllll");
+        stak.push("oo1");
+        stak.push("llll2l");
+        stak.show();
 
-
-
+        System.out.println("//////////////////////");
+        stak.pop();
+        stak.show();
     }
 }

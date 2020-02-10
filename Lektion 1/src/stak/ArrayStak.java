@@ -10,7 +10,6 @@ public class ArrayStak implements Stak {
     private String stak[] = new String[4];
     private int a = 0;
 
-
     @Override
     public void push(String e) {
         if (a < 4) {
@@ -26,30 +25,39 @@ public class ArrayStak implements Stak {
         String firstNumber;
         firstNumber = stak[0];
 
+
         for (int i = 0; i < stak.length; i++) {
             if (i < stak.length - 1) {
                 stak[i] = stak[i + 1];
                 stak[i + 1] = null;
             }
         }
-        return firstNumber;
-    }
 
-    @Override
-    public boolean isEmpty() {
-        int howManyStrings = 4;
-        for (int i = 0; i < stak.length; i++) {
-            if (stak[i] == null) {
-                howManyStrings -= 1;
+            for (int i = 0; i < stak.length - 1; i++) {
+                if (i < stak.length - 1) {
+                    stak[i] = stak[i + 1];
+                    stak[i + 1] = null;
+                }
             }
-            if (howManyStrings == 0) {
-                System.out.println("Den er tom");
-                return true;
-            }
+            return firstNumber;
         }
-        System.out.println("Ikke tom");
-        return false;
-    }
+
+        @Override
+        public boolean isEmpty () {
+            int howManyStrings = 4;
+            for (int i = 0; i < stak.length; i++) {
+                if (stak[i] == null) {
+                    howManyStrings -= 1;
+                }
+                if (howManyStrings == 0) {
+                    System.out.println("Den er tom");
+                    return true;
+                }
+            }
+            System.out.println("Ikke tom");
+            return false;
+
+        }
 
     @Override
     public boolean isFull() {
