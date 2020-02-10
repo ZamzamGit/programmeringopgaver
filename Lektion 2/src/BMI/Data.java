@@ -5,6 +5,14 @@ import java.util.ArrayList;
 public class Data implements IData {
 
 
+
+
+
+
+
+
+
+
     private class Person {
 
         String cpr;
@@ -20,11 +28,10 @@ public class Data implements IData {
         }
     }
 
-
     private ArrayList<Person> personer;
 
     public Data() {
-        personer = new ArrayList<Person>();
+        personer = new ArrayList<>();
         // Tilføj personer
         personer.add(new Person("234567-8901", "Ib Olsen", 1.80, 75.0));
         personer.add(new Person("456789-0123", "Ole Jensen", 1.75, 95.0));
