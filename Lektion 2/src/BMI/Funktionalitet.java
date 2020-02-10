@@ -34,6 +34,6 @@ public class Funktionalitet implements IFunktionalitet {
 
     @Override
     public String getNavn(String cpr) {
-        return null;
+       return d.getNavn(cpr);
     }
 }
