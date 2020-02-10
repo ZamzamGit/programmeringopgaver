@@ -10,12 +10,26 @@ public class Funktionalitet implements IFunktionalitet {
 
     @Override
     public double getBMI(String cpr) {
-        return 0;
+        double bmi = d.getVaegt(cpr) / Math.pow(d.getHoejde(cpr), 2);
+        return bmi;
     }
 
     @Override
     public String getTextualBMI(String cpr) {
-        return null;
+
+        String tekst = "";
+
+        if (getBMI(cpr) < 18.5) {
+            tekst = "Du vejer for lidt";
+        } else if (getBMI(cpr) >= 18.5 || getBMI(cpr) < 25) {
+            tekst = "Din vægt er passende";
+        } else if (getBMI(cpr) <= 25 || getBMI(cpr) <= 30) {
+            tekst = "Du er overvægtig";
+        } else {
+            tekst = "Du er svært overvægtig";
+        }
+
+        return tekst;
     }
 
     @Override
