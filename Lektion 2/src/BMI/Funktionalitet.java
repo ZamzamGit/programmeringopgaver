@@ -17,7 +17,7 @@ public class Funktionalitet implements IFunktionalitet {
     @Override
     public String getTextualBMI(String cpr) {
 
-        String tekst = "";
+        String tekst;
 
         if (getBMI(cpr) < 18.5) {
             tekst = "Du vejer for lidt";

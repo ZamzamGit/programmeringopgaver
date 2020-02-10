@@ -27,6 +27,7 @@ public class Data implements IData {
         personer.add(new Person("234567-8901", "Ib Olsen", 1.80, 75.0));
         personer.add(new Person("456789-0123", "Ole Jensen", 1.75, 95.0));
         personer.add(new Person("123456-7890", "Eva Hansen", 1.65, 65.0));
+        personer.add(new Person("300700-6801", "Fadl Matar", 2.00, 120));
 
     }
     //Returner personens navn
