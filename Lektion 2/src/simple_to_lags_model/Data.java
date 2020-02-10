@@ -11,7 +11,9 @@ public class Data implements IData {
         int amount;
 
         Ingredient(int id, String name, int amount) {
-            //TODO: lav konstruktør
+            this.id = id;
+            this.name = name;
+            this.amount = amount;
         }
 
         @Override
