@@ -20,13 +20,13 @@ public class Funktionalitet implements IFunktionalitet {
         String tekst;
 
         if (getBMI(cpr) < 18.5) {
-            tekst = "Du vejer for lidt";
-        } else if (getBMI(cpr) >= 18.5 || getBMI(cpr) < 25) {
-            tekst = "Din vægt er passende";
-        } else if (getBMI(cpr) <= 25 || getBMI(cpr) <= 30) {
-            tekst = "Du er overvægtig";
+            tekst = "du vejer for lidt";
+        } else if (getBMI(cpr) >= 18.5 && getBMI(cpr) < 25) {
+            tekst = "din vægt er passende";
+        } else if (getBMI(cpr) >= 25 && getBMI(cpr) <= 30) {
+            tekst = "du er overvægtig";
         } else {
-            tekst = "Du er svært overvægtig";
+            tekst = "du er svært overvægtig";
         }
 
         return tekst;

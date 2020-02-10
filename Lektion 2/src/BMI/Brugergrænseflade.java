@@ -18,6 +18,7 @@ public class Brugergrænseflade {
         System.out.println("Indtast dit cpr-nummer");
 
         cpr = scanner.nextLine();
-        System.out.println(f.getNavn(cpr) + ", du har en BMI på " + f.getBMI(cpr));
+        System.out.println(f.getNavn(cpr) + ", du har en BMI på " + f.getBMI(cpr)
+                + ", og " + f.getTextualBMI(cpr));
     }
 }
