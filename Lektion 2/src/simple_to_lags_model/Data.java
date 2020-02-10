@@ -37,32 +37,36 @@ public class Data implements IData {
     public String[] getAllIngredients() {
         String[] liste = new String[ingredients.size()];
         for (int i = 0; i < liste.length; i++) {
+            liste[i] = ingredients.get(i).toString();
         }
         return liste;
     }
 
     @Override
     public String getIngredientName(int id) {
-
+        for (int i = 0; i < ingredients.size(); i++)
+            if (ingredients.get(i).id == id)
+                return ingredients.get(i).name;
+        return null;
     }
 
     @Override
     public int getIngredientAmount(int id) {
-        return 0;
+        return ingredients.get(id).amount;
     }
 
     @Override
     public void setIngredientName(int id, String name) {
-
+        ingredients.get(id).name = name;
     }
 
     @Override
     public void setIngredientAmount(int id, int amount) {
-
+        ingredients.get(id).amount = amount;
     }
 
     @Override
     public void createIngredient(int id, String name, int amount) {
-
+        ingredients.add(new Ingredient(id, name, amount));
     }
 }
