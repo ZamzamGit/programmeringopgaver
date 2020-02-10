@@ -4,6 +4,10 @@ import java.util.ArrayList;
 
 public class Data implements IData {
 
+    Person person = new Person("", "", 0, 0);
+
+
+
 
 
 
