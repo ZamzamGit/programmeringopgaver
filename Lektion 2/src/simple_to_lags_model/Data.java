@@ -1,5 +1,7 @@
 package simple_to_lags_model;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,8 +20,7 @@ public class Data implements IData {
 
         @Override
         public String toString() {
-            //TODO: lav toString metode
-            return null;
+            return "[" + id + ", " + name + ", " + amount + "]";
         }
     }
 
@@ -34,12 +35,15 @@ public class Data implements IData {
 
     @Override
     public String[] getAllIngredients() {
-        return new String[0];
+        String[] liste = new String[ingredients.size()];
+        for (int i = 0; i < liste.length; i++) {
+        }
+        return liste;
     }
 
     @Override
     public String getIngredientName(int id) {
-        return null;
+
     }
 
     @Override
