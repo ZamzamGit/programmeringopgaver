@@ -28,9 +28,9 @@ public class Data implements IData {
 
     public Data() {
         ingredients = new ArrayList<>();
-        ingredients.add(new Ingredient(1, "flormelis", 60));
-        ingredients.add(new Ingredient(2, "mel", 240));
-        ingredients.add(new Ingredient(3, "smør", 185));
+        ingredients.add(new Ingredient(1, "Flormelis", 60));
+        ingredients.add(new Ingredient(2, "Mel", 240));
+        ingredients.add(new Ingredient(3, "Smør", 185));
     }
 
     @Override
@@ -44,9 +44,9 @@ public class Data implements IData {
 
     @Override
     public String getIngredientName(int id) {
-        for (int i = 0; i < ingredients.size(); i++)
-            if (ingredients.get(i).id == id)
-                return ingredients.get(i).name;
+        for (Ingredient ingredient : ingredients)
+            if (ingredient.id == id)
+                return ingredient.name;
         return null;
     }
 
