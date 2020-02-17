@@ -9,13 +9,13 @@ public class Funktionalitet implements IFunktionalitet {
     }
 
     @Override
-    public double getBMI(String cpr) {
+    public double getBMI(String cpr) throws DataException {
         double bmi = d.getVaegt(cpr) / Math.pow(d.getHoejde(cpr), 2);
         return bmi;
     }
 
     @Override
-    public String getTextualBMI(String cpr) {
+    public String getTextualBMI(String cpr) throws DataException {
 
         String tekst;
 
@@ -28,12 +28,11 @@ public class Funktionalitet implements IFunktionalitet {
         } else {
             tekst = "du er svært overvægtig";
         }
-
         return tekst;
     }
 
     @Override
-    public String getNavn(String cpr) {
+    public String getNavn(String cpr) throws DataException {
        return d.getNavn(cpr);
     }
 }

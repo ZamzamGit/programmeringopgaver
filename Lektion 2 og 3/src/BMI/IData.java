@@ -2,7 +2,8 @@ package BMI;
 
 public interface IData {
 
-    String getNavn(String cpr);
-    double getVaegt(String cpr);
-    double getHoejde(String cpr);
+    String getNavn(String cpr) throws DataException;
+    double getVaegt(String cpr) throws DataException;
+    double getHoejde(String cpr) throws DataException;
+
 }
