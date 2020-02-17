@@ -47,7 +47,7 @@ public class Data implements IData {
     }
 
     //Returner personens højde
-    public double getHoejde(String cpr) {
+    public double getHoejde(String cpr) throws IndexOutOfBoundsException {
         for (int i = 0; i < personer.size(); i++)
             if (personer.get(i).cpr.equals(cpr))
                 return personer.get(i).hoejde;
